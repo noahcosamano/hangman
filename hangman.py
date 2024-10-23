@@ -28,7 +28,7 @@ def search_letter(word, current_state, guessed_letters):
 
     print("Guessed letters-", " ".join(guessed_letters))
     letter = input("Enter a letter: ").lower()
-
+    
     if letter in guessed_letters:
         print()
         print("You've already guessed that letter. Try again.")
