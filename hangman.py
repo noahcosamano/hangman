@@ -1,7 +1,7 @@
 import random
 import time
 
-attempts = 5
+attempts = 6
 
 def pick_word(file):
     try:
@@ -9,7 +9,7 @@ def pick_word(file):
             lines = words.readlines()
             if lines:
                 random_line = random.choice(lines)
-                word = random_line.strip()
+                word = random_line.strip().lower()
                 return word
             else:
                 return "File is empty."
@@ -27,7 +27,7 @@ def search_letter(word, current_state, guessed_letters):
     global attempts
 
     print("Guessed letters-", " ".join(guessed_letters))
-    letter = input("Enter a letter: ")
+    letter = input("Enter a letter: ").lower()
 
     if letter in guessed_letters:
         print()
